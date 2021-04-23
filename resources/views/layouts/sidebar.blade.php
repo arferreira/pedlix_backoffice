@@ -3,7 +3,7 @@
     <!-- Brand Logo -->
     <a href="{{url('dashboard')}}" class="brand-link {{setting('logo_bg_color','bg-white')}}">
         <img src="{{$app_logo}}" alt="{{setting('app_name')}}" class="brand-image">
-        <span class="brand-text font-weight-light">{{setting('app_name')}}</span>
+        <span class="brand-text font-weight-light">Delivery</span>
     </a>
 
     <!-- Sidebar -->
