@@ -104,9 +104,8 @@
         <!-- Main Footer -->
         <footer class="main-footer {{setting('fixed_footer','')}}">
             <div class="float-right d-none d-sm-block">
-                <b>Version</b> {{implode('.',str_split(substr(config('installer.currentVersion','v100'),1,3)))}}
+                <strong>Copyright © {{date('Y')}} <a href="{{url('/')}}">{{setting('app_name')}}</a>.</strong> Todos os direitos reservados.
             </div>
-            <strong>Copyright © {{date('Y')}} <a href="{{url('/')}}">{{setting('app_name')}}</a>.</strong> All rights reserved.
         </footer>
 
     </div>

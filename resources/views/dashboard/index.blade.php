@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>{{trans('lang.dashboard')}}</h1>
+                    <h1>Painel</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -22,23 +22,23 @@
         <div class="row">
             <div class="col-lg-3 col-6">
                 <!-- small box -->
-                <div class="small-box bg-info">
+                <div class="small-box bg-dark">
                     <div class="inner">
                         <h3>{{$ordersCount}}</h3>
 
-                        <p>{{trans('lang.dashboard_total_orders')}}</p>
+                        <p>Total de Pedidos</p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-shopping-bag"></i>
                     </div>
-                    <a href="{!! route('orders.index') !!}" class="small-box-footer">{{trans('lang.dashboard_more_info')}}
+                    <a href="{!! route('orders.index') !!}" class="small-box-footer">Ver mais
                         <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
             <div class="col-lg-3 col-6">
                 <!-- small box -->
-                <div class="small-box bg-danger">
+                <div class="small-box bg-dark">
                     <div class="inner">
                         @if(setting('currency_right', false) != false)
                             <h3>{{$earning}}{{setting('default_currency')}}</h3>
@@ -46,43 +46,43 @@
                             <h3>{{setting('default_currency')}}{{$earning}}</h3>
                         @endif
 
-                        <p>{{trans('lang.dashboard_total_earnings')}} <span style="font-size: 11px">({{trans('lang.dashboard_after taxes')}})</span></p>
+                        <p>Total de Ganhos <span style="font-size: 11px">(Com as taxas)</span></p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-money"></i>
                     </div>
-                    <a href="{!! route('payments.index') !!}" class="small-box-footer">{{trans('lang.dashboard_more_info')}}
+                    <a href="{!! route('payments.index') !!}" class="small-box-footer">Ver mais
                         <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
             <div class="col-lg-3 col-6">
                 <!-- small box -->
-                <div class="small-box bg-success">
+                <div class="small-box bg-dark">
                     <div class="inner">
                         <h3>{{$marketsCount}}</h3>
-                        <p>{{trans('lang.market_plural')}}</p>
+                        <p>Estabelecimentos</p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-cutlery"></i>
                     </div>
-                    <a href="{!! route('markets.index') !!}" class="small-box-footer">{{trans('lang.dashboard_more_info')}}
+                    <a href="{!! route('markets.index') !!}" class="small-box-footer">Ver mais
                         <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
             <div class="col-lg-3 col-6">
                 <!-- small box -->
-                <div class="small-box bg-warning">
+                <div class="small-box bg-dark">
                     <div class="inner">
                         <h3>{{$membersCount}}</h3>
 
-                        <p>{{trans('lang.dashboard_total_clients')}}</p>
+                        <p>Usuários</p>
                     </div>
                     <div class="icon">
                         <i class="fa fa-group"></i>
                     </div>
-                    <a href="{!! route('users.index') !!}" class="small-box-footer">{{trans('lang.dashboard_more_info')}}
+                    <a href="{!! route('users.index') !!}" class="small-box-footer">Ver mais
                         <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
@@ -96,8 +96,8 @@
                 <div class="card">
                     <div class="card-header no-border">
                         <div class="d-flex justify-content-between">
-                            <h3 class="card-title">{{trans('lang.earning_plural')}}</h3>
-                            <a href="{!! route('payments.index') !!}">{{trans('lang.dashboard_view_all_payments')}}</a>
+                            <h3 class="card-title">Ganhos</h3>
+                            <a href="{!! route('payments.index') !!}">Todos os pagamentos</a>
                         </div>
                     </div>
                     <div class="card-body">
@@ -108,11 +108,11 @@
                                 @else
                                     <span class="text-bold text-lg">{{setting('default_currency')}}{{$earning}}</span>
                                 @endif
-                                <span>{{trans('lang.dashboard_earning_over_time')}}</span>
+                                <span>Ganhos durante o tempo</span>
                             </p>
                             <p class="ml-auto d-flex flex-column text-right">
                                 <span class="text-success"> {{$ordersCount}}</span></span>
-                                <span class="text-muted">{{trans('lang.dashboard_total_orders')}}</span>
+                                <span class="text-muted">Total de Pedidos</span>
                             </p>
                         </div>
                         <!-- /.d-flex -->
@@ -122,7 +122,7 @@
                         </div>
 
                         <div class="d-flex flex-row justify-content-end">
-                            <span class="mr-2"> <i class="fa fa-square text-primary"></i> {{trans('lang.dashboard_this_year')}} </span>
+                            <span class="mr-2"> <i class="fa fa-square text-primary"></i> Este ano </span>
                         </div>
                     </div>
                 </div>
